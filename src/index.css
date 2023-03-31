@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply dark:bg-black dark:text-slate-100 h-fit;
+  }
+
+  #root {
+    @apply w-[100%] flex flex-col justify-start items-center;
+  }
+
+  h1 {
+    @apply font-bold text-[2rem];
+  }
+
+  h2 {
+    @apply font-bold text-[1.2rem];
+  }
+
+  section {
+    @apply p-4 [&>*]:mb-8;
+  }
+  .section-title {
+    @apply relative w-fit h-fit font-normal before:content-[''] before:block before:absolute before:bg-violet-500 before:h-1 before:bottom-0 before:w-full;
+  }
+
+  .reasons > li {
+    @apply dark:border-solid dark:border-violet-500 border-2 w-[40ch] p-4 flex flex-col gap-4 text-center rounded-lg;
+  }
+
+  .reasons > li > h2 {
+    @apply text-violet-500;
+  }
+
+  .reasons > li > p {
+    @apply text-left;
+  }
+}
