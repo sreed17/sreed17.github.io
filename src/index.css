@@ -44,4 +44,8 @@
   .social-link {
     @apply underline;
   }
+
+  .portfolio-fixed-header {
+    @apply bg-violet-500;
+  }
 }

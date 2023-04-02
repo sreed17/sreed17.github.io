@@ -9,8 +9,29 @@ import {
 function App() {
   const appRef = useRef();
   const timelineRef = useRef();
+  const prevElemRef = useRef();
+  const pHeaderRef = useRef();
 
   useLayoutEffect(() => {
+    const pHeader = pHeaderRef.current;
+    const prevElem = prevElemRef.current; // Points to the elem just above the sticky header
+    // Defining an Interaction Observer
+    const options = { root: null, rootMargin: '0px', threshold: 0.01 };
+    const iCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        const reqFlag =
+          !entry.isIntersecting && entry.boundingClientRect.top <= 0;
+        if (reqFlag) pHeader.classList.add('portfolio-fixed-header');
+        else pHeader.classList.remove('portfolio-fixed-header');
+      });
+    };
+    const iObserver = new window.IntersectionObserver(iCallback, options);
+
+    // Interaction target
+
+    iObserver.observe(prevElem);
+
+    // Animations using gsap
     let ctx = gsap.context(() => {
       // Animations
       timelineRef.current = gsap.timeline();
@@ -72,7 +93,7 @@ function App() {
           </a>
         </nav>
       </section>
-      <section id="about-me" className="px-8 gap-8">
+      <section id="about-me" className="px-8 gap-8" ref={prevElemRef}>
         <div className="grid grid-flow-row gap-8 lg:gap-x-32 place-content-center">
           <h1 className="section-title">About Me</h1>
 
@@ -115,7 +136,10 @@ function App() {
         </div>
       </section>
       <section id="portfolio" className="justify-start">
-        <header className="w-full sticky top-0 px-8 flex flex-row justify-start lg:justify-center items-center">
+        <header
+          ref={pHeaderRef}
+          className="w-full sticky top-0 px-8 flex flex-row justify-start lg:justify-center items-center "
+        >
           <h1 className="section-title lg:w-[65rem]">Portfolio</h1>
         </header>
         <div className=" w-full h-fit p-2"></div>
