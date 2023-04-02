@@ -4,7 +4,9 @@ import { gsap } from 'gsap';
 import {
   IoArrowDownCircleOutline,
   IoArrowUpCircleOutline,
+  IoLink,
 } from 'react-icons/io5';
+import PortfolioItem from './components/PortfolioItem';
 
 function App() {
   const appRef = useRef();
@@ -95,9 +97,9 @@ function App() {
       </section>
       <section id="about-me" className="px-8 gap-8" ref={prevElemRef}>
         <div className="grid grid-flow-row gap-8 lg:gap-x-32 place-content-center">
-          <h1 className="section-title">About Me</h1>
+          <h1 className="section-title lg:col-start-2">About Me</h1>
 
-          <p className="text-sm lg:text-lg lg:row-start-2 lg:col-start-1 lg:w-[60ch]">
+          <p className="text-sm lg:text-lg lg:row-start-2 lg:col-start-2 lg:w-[60ch]">
             I am a self taught artist, designer and developer based in Kerala,
             India. I am a Mathematics post graduate and Computer science
             researcher who has great passion for art and engineer. I like using
@@ -106,14 +108,14 @@ function App() {
             creative limits.
           </p>
           <img
-            src="https://images.unsplash.com/photo-1640952131659-49a06dd90ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            src="/sreed_avatar.jpg"
             height={64}
             width={64}
-            className=" row-start-2 w-48 h-48 lg:w-64 lg:h-64 aspect-square object-cover rounded-full place-self-center lg:row-span-2 lg:col-start-2"
+            className=" row-start-2 w-48 h-48 lg:w-64 lg:h-64 aspect-square object-cover rounded-full place-self-center lg:row-start-1 lg:row-span-2 lg:col-start-1"
           />
         </div>
         <div className="w-full mb-16 flex flex-col items-center justify-center">
-          <h1 className="text-xl lg:text-3xl text-center p-4 font-bold ">
+          <h1 className="text-xl lg:text-3xl text-center p-4 ">
             Why work with me?
           </h1>
           <ul className="reasons  flex flex-col lg:flex-row gap-4">
@@ -142,7 +144,13 @@ function App() {
         >
           <h1 className="section-title lg:w-[65rem]">Portfolio</h1>
         </header>
-        <div className=" w-full h-fit p-2"></div>
+        <div className=" w-full lg:w-[1035px] h-fit px-8 flex flex-col gap-4 items-center pt-16">
+          <PortfolioItem imgURL="https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1605&q=80">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            aperiam laborum maxime ullam, sed architecto? Dolorem obcaecati
+            repellendus qui rerum.
+          </PortfolioItem>
+        </div>
       </section>
       <footer className="w-full bg-violet-500 p-2 flex flex-row items-center justify-center gap-4">
         <a
