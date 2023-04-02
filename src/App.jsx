@@ -23,26 +23,26 @@ function App() {
     <>
       <section id="hero">
         <hgroup className="grid grid-flow-row place-content-center ">
-          <h1 className="text-[3rem] font-bold place-self-center md:text-[5rem] md:col-span-2">
+          <h1 className="text-[3rem] font-bold place-self-center lg:text-[5rem] lg:col-span-2 leading-none">
             Sreekanth D
           </h1>
-          <h2 className="text-xl font-semibold place-self-center md:place-self-start md:row-start-2">
+          <h2 className="text-xl font-semibold place-self-center lg:place-self-start lg:row-start-2">
             Digital Craftsman
           </h2>
-          <h3 className="text-sm p-1 place-self-center md:place-self-end md:row-start-2">
+          <h3 className="text-sm p-1 place-self-center lg:place-self-end lg:row-start-2">
             Artist / Designer / Developer
           </h3>
         </hgroup>
         <div className="grid grid-flow-row gap-8 px-8">
-          <p className="text-xl md:max-w-[30ch] md:text-3xl">
+          <p className="text-xl lg:max-w-[30ch] lg:text-3xl">
             I will help you turn your ideas into a functional and aesthetically
             pleasing experience.
           </p>
-          <div className="flex flex-col w-full md:col-start-2">
-            <span className=" text-violet-400 md:text-xl">
+          <div className="flex flex-col w-full lg:col-start-2">
+            <span className=" text-violet-400 lg:text-xl">
               Available for freelance work
             </span>
-            <span className="font-bold text-lg md:text-2xl md:font-semibold">
+            <span className="font-bold text-lg lg:text-2xl lg:font-semibold">
               inbox.sreekanthd@gmail.com
             </span>
             <ul className="flex flex-row gap-2">
@@ -73,10 +73,10 @@ function App() {
         </nav>
       </section>
       <section id="about-me" className="px-8 gap-8">
-        <div className="grid grid-flow-row gap-8 md:gap-x-32 place-content-center">
+        <div className="grid grid-flow-row gap-8 lg:gap-x-32 place-content-center">
           <h1 className="section-title">About Me</h1>
 
-          <p className="text-sm md:text-lg md:row-start-2 md:col-start-1 md:w-[60ch]">
+          <p className="text-sm lg:text-lg lg:row-start-2 lg:col-start-1 lg:w-[60ch]">
             I am a self taught artist, designer and developer based in Kerala,
             India. I am a Mathematics post graduate and Computer science
             researcher who has great passion for art and engineer. I like using
@@ -88,14 +88,14 @@ function App() {
             src="https://images.unsplash.com/photo-1640952131659-49a06dd90ad2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
             height={64}
             width={64}
-            className=" row-start-2 w-48 h-48 md:w-64 md:h-64 aspect-square object-cover rounded-full place-self-center md:row-span-2 md:col-start-2"
+            className=" row-start-2 w-48 h-48 lg:w-64 lg:h-64 aspect-square object-cover rounded-full place-self-center lg:row-span-2 lg:col-start-2"
           />
         </div>
         <div className="w-full mb-16 flex flex-col items-center justify-center">
-          <h1 className="text-xl md:text-3xl text-center p-4 font-bold ">
+          <h1 className="text-xl lg:text-3xl text-center p-4 font-bold ">
             Why work with me?
           </h1>
-          <ul className="reasons  flex flex-row flex-wrap gap-4">
+          <ul className="reasons  flex flex-col lg:flex-row gap-4">
             <li>
               <h2>Flexible & Experienced</h2>
               <p>
@@ -115,8 +115,8 @@ function App() {
         </div>
       </section>
       <section id="portfolio" className="justify-start">
-        <header className="w-full sticky top-0 px-8 flex flex-row justify-center">
-          <h1 className="section-title md:w-[65rem]">Portfolio</h1>
+        <header className="w-full sticky top-0 px-8 flex flex-row justify-start lg:justify-center items-center">
+          <h1 className="section-title lg:w-[65rem]">Portfolio</h1>
         </header>
         <div className=" w-full h-fit p-2"></div>
       </section>
